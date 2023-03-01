@@ -2,20 +2,25 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-function Navbar({ change }) {
+function Navbar({ change, handleChange }) {
 	const [open, setOpen] = useState(false);
 	const handleClick = () => setOpen(!open);
 
 	return (
 		<nav className="w-full sticky top-0 bg-blue-600 text-white text-lg font-normal z-10 flex items-center justify-between py-3 px-2 md:px-8 md:flex-row md:py-1 lg:flex-row lg:py-0">
-			<Link
-				to="/"
-				className="flex items-center md:mb-2 z-10 lg:mt-1 w-[300px] h-[50px]"
-			>
-				<h1 className="text-xl w-full font-normal ml-2">
-					{!change ? 'Home' : 'गृहपृष्ठ'}
-				</h1>
-			</Link>
+			<div className="flex items-center md:mb-2 z-10 lg:mt-1 w-[300px] h-[50px]">
+				<Link to="/" className="">
+					<h1 className="text-xl w-full font-normal ml-2">
+						{!change ? 'Home' : 'गृहपृष्ठ'}
+					</h1>
+				</Link>
+				<button
+					onClick={handleChange}
+					className="text-white font-semibold ml-5"
+				>
+					ने / E
+				</button>
+			</div>
 
 			<div
 				onClick={handleClick}

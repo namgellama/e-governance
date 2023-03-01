@@ -7,7 +7,7 @@ function Header({ change, handleChange }) {
 			<div className="pl-0 lg:pl-4">
 				<img src={Logo} alt="logo" className="w-[90px] md:w-[100px]" />
 			</div>
-			<div className="text-center text-black py-2 tracking-wider">
+			<div className="text-center text-[#d33434]  py-2 tracking-wider">
 				<h3 className="text-sm font-bold">
 					{!change ? 'Nepal Government' : 'नेपाल सरकार'}
 				</h3>
@@ -31,7 +31,6 @@ function Header({ change, handleChange }) {
 					src={NepalGif}
 					alt="Nepal Flag"
 				/>
-				<button onClick={handleChange}>न / E</button>
 			</div>
 		</header>
 	);

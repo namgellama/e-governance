@@ -11,10 +11,10 @@ function App() {
 
 	return (
 		<>
-			<Header change={change} handleChange={handleChange} />
-			<Navbar change={change} />
+			<Header change={change} />
+			<Navbar change={change} handleChange={handleChange} />
 			<Routes>
-				<Route path="/license" element={<License />} />
+				<Route path="/license" element={<License change={change} />} />
 			</Routes>
 
 			<Footer change={change} />
