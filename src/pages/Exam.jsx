@@ -31,8 +31,12 @@ function Exam({ change }) {
 		const value = target.value;
 
 		setFormData([...formData, value]);
-		setData(data);
+		setData(value);
 		console.log(data);
+	};
+
+	const handleDisable = () => {
+		setDisable(true);
 	};
 
 	let marks = 0;
@@ -48,6 +52,7 @@ function Exam({ change }) {
 				}
 			}
 		}
+		console.log(marks);
 	};
 
 	const showResult = () => {
@@ -81,7 +86,7 @@ function Exam({ change }) {
 												value={item}
 												name={question._id}
 												className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-												onChange={handleChange}
+												onChange={handleDisable}
 												disabled={countdown === 0 ? true : false}
 											/>
 											<label className="ml-2 text-base font-medium text-black">

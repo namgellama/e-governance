@@ -56,7 +56,7 @@ function Navbar({ change, handleChange }) {
 				<li className="my-3 md:my-2 lg:mx-2 lg:mt-3" onClick={handleClick}>
 					<Link
 						className="text-white hover:text-gray-400 duration-200"
-						to="/exam"
+						to="/quiz"
 					>
 						{!change ? 'Exam' : 'परीक्षा'}
 					</Link>

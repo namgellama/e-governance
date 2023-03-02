@@ -404,7 +404,7 @@ function License({ change }) {
 					<h2 className="text-2xl font-semibold mt-6 mb-2">
 						{!change ? 'Present Address' : 'अहिलेकाे ठेगाना'}
 					</h2>
-					<div className="flex items-center mb-4 self-start pl-5 md:pl-11 lg:pl-0">
+					<div className="flex items-center mb-4 self-start pl-[4.5rem] md:pl-11 lg:pl-0">
 						<input
 							id="default-checkbox"
 							type="checkbox"

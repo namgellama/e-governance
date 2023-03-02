@@ -5,6 +5,8 @@ import Footer from './components/layouts/Footer';
 import Header from './components/layouts/Header';
 import License from './pages/License';
 import Exam from './pages/Exam';
+import Quiz from './pages/Quiz';
+import Home from './pages/Home';
 
 function App() {
 	const [change, setChange] = useState(true);
@@ -15,8 +17,10 @@ function App() {
 			<Header change={change} />
 			<Navbar change={change} handleChange={handleChange} />
 			<Routes>
+				<Route path="/" element={<Home change={change} />} />
 				<Route path="/license" element={<License change={change} />} />
 				<Route path="/exam" element={<Exam change={change} />} />
+				<Route path="/quiz" element={<Quiz change={change} />} />
 			</Routes>
 
 			<Footer change={change} />
