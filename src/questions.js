@@ -1,3 +1,8 @@
+import park1 from './assets/park1.png';
+import park2 from './assets/park2.png';
+import park3 from './assets/park3.png';
+import park4 from './assets/park4.png';
+
 const questions = [
 	{
 		titleNepali: 'जेब्रा क्रसिङको उपयोग के हो ?',
@@ -62,6 +67,22 @@ const questions = [
 			{ id: 1, text: 'Left side', isCorrect: true },
 			{ id: 2, text: 'Whatever side available', isCorrect: false },
 			{ id: 3, text: 'None of the above', isCorrect: false },
+		],
+	},
+	{
+		titleNepali: 'नो पार्किङको संकेत के हो ?',
+		titleEnglish: 'What is the sign of no parking ?',
+		optionsNepali: [
+			{ id: 0, text: '', image: park4, isCorrect: false },
+			{ id: 1, text: '', image: park2, isCorrect: false },
+			{ id: 2, text: '', image: park3, isCorrect: false },
+			{ id: 3, text: '', image: park1, isCorrect: true },
+		],
+		optionsEnglish: [
+			{ id: 0, text: '', image: park4, isCorrect: false },
+			{ id: 1, text: '', image: park2, isCorrect: false },
+			{ id: 2, text: '', image: park3, isCorrect: false },
+			{ id: 3, text: '', image: park1, isCorrect: true },
 		],
 	},
 ];

@@ -123,6 +123,13 @@ function Quiz({ change }) {
 											onClick={() => optionClicked(option.isCorrect)}
 										>
 											{option.text}
+											{option.image && (
+												<img
+													className="w-[70px] h-[70px] mx-auto"
+													src={option.image}
+													alt=""
+												/>
+											)}
 										</li>
 									);
 							  })}
