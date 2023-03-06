@@ -63,7 +63,7 @@ function Quiz({ change }) {
 			{/* 3. Show results or show the question game  */}
 			{showResults ? (
 				/* 4. Final Results */
-				<div className="w-[60%] mx-auto h-[300px] lg:[250px] my-16 bg-purple-700 p-4 rounded-md text-white">
+				<div className="w-[60%] mx-auto h-[300px] lg:[250px] my-16 bg-blue-700 p-4 rounded-md text-white">
 					<h1 className="text-2xl">
 						{countdown === 0 && (!change ? 'Time up' : 'समय सकियो')}
 					</h1>
@@ -77,7 +77,7 @@ function Quiz({ change }) {
 						({(score / questions.length) * 100}%)
 					</h2>
 					<p className="text-3xl mt-4">
-						{score > passmarks
+						{score >= passmarks
 							? !change
 								? 'Pass'
 								: 'पास'
@@ -88,7 +88,7 @@ function Quiz({ change }) {
 				</div>
 			) : (
 				/* 5. Question Card  */
-				<div className="w-[80%] h-auto mx-auto bg-purple-700 p-4 rounded-2xl mb-8 text-white">
+				<div className="w-[80%] h-auto mx-auto bg-blue-700 p-4 rounded-2xl mb-8 text-white">
 					{/* Current Question  */}
 					<h2 className="text-2xl py-3  font-semibold">
 						{!change
@@ -107,7 +107,8 @@ function Quiz({ change }) {
 							? questions[currentQuestion].optionsEnglish.map((option) => {
 									return (
 										<li
-											className="mt-2 bg-gray-600 p-4 border border-white text-lg font-semibold"
+											className="mt-2 bg-gray-300
+                                            text-black p-4 border border-white text-lg font-semibold"
 											key={option.id}
 											onClick={() => optionClicked(option.isCorrect)}
 										>
@@ -125,7 +126,7 @@ function Quiz({ change }) {
 							: questions[currentQuestion].optionsNepali.map((option) => {
 									return (
 										<li
-											className="mt-2 bg-gray-600 p-4 border border-white text-lg font-semibold"
+											className="mt-2 bg-gray-300 p-4 border border-white text-lg font-semibold text-black"
 											key={option.id}
 											onClick={() => optionClicked(option.isCorrect)}
 										>
